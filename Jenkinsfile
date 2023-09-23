@@ -4,7 +4,7 @@ node {
          checkout scm
      }
      stage('Build image') {
-         app = docker.build("jhlee3070/doc_jh")
+         app = docker.build("jhlee3070/repo1")
      }
      stage('Push image') {
          docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
@@ -15,7 +15,7 @@ node {
 }
 
 stage('Build image') {
-  app = docker.build("jhlee3070/doc_jh")
+  app = docker.build("jhlee3070/repo1")
 }
 
 stage('Push image') {
